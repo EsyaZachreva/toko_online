@@ -20,7 +20,7 @@ class _RegisterUserViewState extends State<RegisterUserView> {
   final TextEditingController address = TextEditingController();
   final TextEditingController birthday = TextEditingController();
 
-  List roleChoice = ["Admin", "User"];
+  List roleChoice = ["admin", "user"];
   String? role;
 
   InputDecoration _inputDecoration(String label, IconData icon) {
@@ -107,7 +107,7 @@ class _RegisterUserViewState extends State<RegisterUserView> {
                     const SizedBox(height: 16),
 
                     DropdownButtonFormField(
-                      value: role,
+                      initialValue: role,
                       items: roleChoice.map((r) {
                         return DropdownMenuItem(value: r, child: Text(r));
                       }).toList(),
